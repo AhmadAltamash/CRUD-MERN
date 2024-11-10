@@ -1,0 +1,344 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+html,body{
+  height:100vh;
+  width:100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.header{
+  width: 100%;
+  height: 6rem;
+  padding: 2rem 3rem;
+}
+.login{
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  background-color: #fcfcfc;
+  display: block;
+  padding: 1rem;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input, .form button {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.input-container input {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #4F46E5;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nav{
+  position: fixed;
+  top: 6%;
+  right: 3%;
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+.nav a{
+  text-decoration: none;
+  color: #4F46E5;
+  font-size: 1.2em;
+  transition: .3s;
+}
+.nav a:hover{
+  scale:1.1;
+  color: #4b43df;
+}
+.logoutBtn{
+  background-color: #4F46E5;
+  color: #fff;
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 0.7em;
+  cursor: pointer;
+  outline: none;
+  transition: .3s;
+}
+.logoutBtn:hover{
+  box-shadow: 0px 5px 5px #e0e0e0;
+  scale: 1.1;
+}
+.userInfo{
+  display: flex;
+  gap: .5em;
+  font-weight: 400;
+  font-size: 1.5em;
+  font-style: italic;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-container{
+  padding: 2rem 3rem;
+  margin-top: .5em;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.table-content{
+  border: 1px solid #000;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.table-content .table-heading{
+  width: 100%;
+  padding: .5em;
+  background: #c4c2ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table-content .table-heading h2{
+  font-weight: 500;
+  font-style: italic;
+}
+.searchFilter{
+  width: 40%;
+  padding: .5em 1em;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0px 1px 10px #848484;
+  border: none;
+  transition: .3s;
+  font-size: 1.1em;
+  font-style: italic;
+}
+.searchFilter:focus{
+  box-shadow: none;
+}
+.del{
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.3em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+.del:hover{
+  background-color: #d43434;
+}
+.ac{
+  background-color: #16bc16;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.3em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+.ac:hover{
+  background-color: #0f9f0f;
+}
+.deac{
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.3em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+.deac:hover{
+  background-color: #d43434;
+}
+.edit{
+  background-color: #3aa8dc;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.3em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+  text-decoration: none;
+}
+.edit:hover{
+  background-color: #3498c7;
+}
+td p{
+  font-weight: 600;
+  font-style: italic;
+}
+tr th{
+  padding: 0.7em;
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+}
+td{
+  padding: 0.7em;
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+}
+.employee-create-container{
+  padding: 1.5em 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.addEmployeeForm{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 2em;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px #bababa;
+  padding: 1em;
+  height: 350px;
+  width: max-content;
+}
+.addEmployeeForm .row{
+  display: flex;
+  gap: 2em;
+}
+.rowProf{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: .2em;
+  flex-direction: column;
+}
+.row-radio{
+  display: flex;
+  gap: 10em;
+}
+.form-group-gender{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  gap: .5em;
+}
+.radio-gender{
+  display: flex;
+  gap: .5em;
+}
+.form-group-course{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  gap: .5em;
+}
+.radio-course{
+  display: flex;
+  gap: .5em;
+}
+
+.note{
+  opacity: .6;
+  font-size: .9em;
+}
+.addBtn{
+  background-color: #4F46E5;
+  color: #fff;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: max-content;
+  font-size: 1.1em;
+  box-shadow: 0px 2px 15px #a2a2a2;
+  transition: .3s;
+}
+.addBtn:hover{
+  scale: 1.1;
+  box-shadow: none;
+}
+.addEmployeeForm .inpTxt{
+  border-radius: 5px;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  background: #f7f7f7;
+  transition: .2s;
+  font-size: 1.2em;
+  box-shadow: 0px 1px 8px #aeaeae;
+}
+.addEmployeeForm .inpTxt:focus{
+  background: #ffffff;
+  box-shadow: none;
+  outline: 1px solid #4b43df;
+}
+.profileInput{
+  padding: 0;
+  font-size: .9em;
+  width: max-content;
+}
+.form-group-desig{
+  display: flex;
+  flex-direction: column;
+}
+.form-group-desig select{
+  font-size: 1.2em;
+  padding: 0.5em;
+  outline: none;
+  background: #f7f7f7;
+  border: none;
+  transition: .2s;
+  border-radius: 5px;
+  box-shadow: 0px 1px 8px #aeaeae;
+}
+.form-group-desig select:focus{
+  background: #ffffff;
+  box-shadow: none;
+  outline: 1px solid #4b43df;
+}
