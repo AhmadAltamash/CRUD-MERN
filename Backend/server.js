@@ -12,6 +12,10 @@ const port = 8000;
 
 Connection();
 
+app.get('/', (req, res) => {
+    res.json({ msg: "Server is Running" });
+});
+
 // Configure Cloudinary
 cloudinary.config({
     cloud_name: 'du7xgosqr',
