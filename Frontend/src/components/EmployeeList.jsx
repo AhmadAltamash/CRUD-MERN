@@ -17,7 +17,7 @@ function EmployeeList() {
       }
       try {
         console.log('Sending search term:', searchTerm);
-        const response = await axios.get(`http://localhost:8000/employees?searchTerm=${searchTerm}`, {
+        const response = await axios.get(`https://crud-mern-2-gsct.onrender.com/employees?searchTerm=${searchTerm}`, {
           headers: { Authorization: `${token}` },
         });
         console.log('Received employees:', response.data);
@@ -34,7 +34,7 @@ function EmployeeList() {
   // Handle delete employee
   const deleteEmployee = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/employees/${id}`, {
+      await axios.delete(`https://crud-mern-2-gsct.onrender.com/employees/${id}`, {
         headers: { Authorization: `${token}` },
       });
       setEmployees((prevEmployees) => prevEmployees.filter((employee) => employee._id !== id));
@@ -50,7 +50,7 @@ function EmployeeList() {
   const toggleStatus = async (id, currentStatus) => {
     try {
       const updatedStatus = { status: !currentStatus };
-      await axios.put(`http://localhost:8000/employees/${id}`, updatedStatus, {
+      await axios.put(`https://crud-mern-2-gsct.onrender.com/${id}`, updatedStatus, {
         headers: { Authorization: `${token}` },
       });
       setEmployees((prevEmployees) =>

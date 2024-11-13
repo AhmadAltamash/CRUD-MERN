@@ -22,7 +22,7 @@ function EmployeeEdit() {
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/employees/${id}`);
+        const response = await axios.get(`https://crud-mern-2-gsct.onrender.com/employees/${id}`);
         setEmployeeData(response.data); 
       } catch (error) {
         console.error('Error fetching employee data:', error);
@@ -45,7 +45,7 @@ function EmployeeEdit() {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await axios.put(`http://localhost:8000/employees/${id}`, formData, {
+      const response = await axios.put(`https://crud-mern-2-gsct.onrender.com/employees/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `${token}`,

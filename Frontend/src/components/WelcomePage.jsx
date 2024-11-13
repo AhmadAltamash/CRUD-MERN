@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Redirect,Link } from 'react-router-dom';
 import Navigation from './Navigation';
 
 function WelcomePage() {
